@@ -31,6 +31,12 @@ public class User {
 	@OneToOne(mappedBy = "user")
 	private Goal goal;
 	
+	@OneToMany(mappedBy = "user")
+	private List<Exercise> exercise;
+	
+	@OneToOne(mappedBy = "user")
+	private Device device;
+	
 	
 	public User() {
 	}
